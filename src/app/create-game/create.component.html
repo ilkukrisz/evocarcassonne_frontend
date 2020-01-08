@@ -1,0 +1,12 @@
+<div>
+  <h1>{{ title }}</h1>
+  <button (click)="createGame()">Create game</button>
+
+  <div>{{ gameId }}</div>
+
+  <input
+    [value]="playerName"
+    (input)="playerName = $event.target.value"
+    placeholder="New Player's Name"
+  />
+</div>

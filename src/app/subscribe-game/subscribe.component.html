@@ -1,0 +1,8 @@
+<div>
+  <button (click)="subscribeGame()">Subscribe</button><br />
+  <input
+    [value]="playerName"
+    (input)="playerName = $event.target.value"
+    placeholder="Your Name"
+  />
+</div>
