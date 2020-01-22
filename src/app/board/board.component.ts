@@ -10,7 +10,6 @@ import { PlayerInfo } from "../api/models/playerinfo";
 import { Position } from "../api/models/position";
 
 @Component({
-  // tslint:disable-next-line: component-selector
   selector: "board",
   templateUrl: "./board.component.html"
 })
@@ -20,7 +19,6 @@ export class BoardComponent implements OnInit {
     private playerService: PlayerService,
     private gameService: GameService
   ) {}
-  // tslint:disable member-ordering
   title: string;
   @Input() gameId: string;
   tileSize: number;

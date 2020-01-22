@@ -8,10 +8,11 @@ import { GameService } from "../api/game.service";
 })
 @Injectable()
 export class SubscribeComponent implements OnInit {
+  playerName: string;
+
   ngOnInit(): void {
     this.playerName = "";
   }
-  playerName: string;
 
   constructor(
     private PlayerService: PlayerService,

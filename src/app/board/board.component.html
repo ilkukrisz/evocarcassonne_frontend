@@ -1,4 +1,8 @@
-<div style="position: absolute; height: 100%;width: 100%;">
+<div
+  style="position: absolute;
+  height: 100%;
+  width: 100%;"
+>
   <div
     style="padding-left: 10px; padding-top: 50px; padding-bottom: 20px;
     padding-right: 10px; height:max-content; background-color: seagreen; z-index: 2;"
@@ -73,6 +77,16 @@
   </div>
 
   <div
+    style="position: relative;
+  width: 80%;
+  height: 80%;
+  overflow: hidden;
+  z-index: 1;
+  text-align: center;
+  top: 150px;
+  margin: 0 auto;
+  background-color: bisque;
+  cursor: move;"
     mouseWheel
     (mousedown)="onMoveStart($event)"
     (mouseup)="onMoveEnd($event)"
@@ -81,19 +95,9 @@
     (mouseleave)="mouseLeave($event)"
     (mouseWheelUp)="mouseWheelUp($event)"
     (mouseWheelDown)="mouseWheelDown($event)"
-    style="position: relative;
-      width: 80%;
-      height: 80%;
-      overflow: hidden;
-      z-index: 1;
-      text-align: center;
-      top: 150px;
-      margin: 0 auto;
-      background-color: bisque;
-      cursor:move"
   >
     <div
-      name="gamePlayArea"
+      id="gamePlayArea"
       *ngFor="let tileonTable of tableInfo.tableInfo"
       [ngStyle]="{
         position: 'absolute',
@@ -118,7 +122,7 @@
     </div>
 
     <div
-      name="placeTileArea"
+      id="placeTileArea"
       [ngStyle]="{
         position: 'absolute',
         height: 'min-content',

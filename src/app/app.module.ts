@@ -1,3 +1,4 @@
+// tslint:disable: quotemark
 import { BrowserModule } from "@angular/platform-browser";
 import { NgModule } from "@angular/core";
 import { AngularDraggableModule } from "angular2-draggable";
