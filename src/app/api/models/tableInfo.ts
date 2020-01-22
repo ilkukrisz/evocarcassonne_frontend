@@ -6,6 +6,7 @@ export class TableInfo {
   currentRound: number;
   currentPlayer: PlayerInfo;
   tableInfo: Array<Tile>;
+  gameState: string;
   constructor(
     playerInfo: Array<{
       playerId: string;
@@ -20,11 +21,13 @@ export class TableInfo {
       name: string;
       points: number;
     },
-    tableInfo: Array<Tile>
+    tableInfo: Array<Tile>,
+    gameState: string
   ) {
     this.playerInfo = playerInfo;
     this.currentRound = currentRound;
     this.currentPlayer = currentPlayer;
     this.tableInfo = tableInfo;
+    this.gameState = gameState;
   }
 }

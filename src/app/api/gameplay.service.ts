@@ -56,7 +56,7 @@ export class GamePlayService {
 
   currentPlayer(gameId: string, callback) {
     this.http
-      .post(BASE_URL + "/CurrentPlayer", "", {
+      .get(BASE_URL + "/CurrentPlayer", {
         headers: new HttpHeaders({
           ["Content-Type"]: "application/json",
           ["gameId"]: gameId,

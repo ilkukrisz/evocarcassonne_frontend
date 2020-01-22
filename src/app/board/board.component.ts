@@ -62,7 +62,8 @@ export class BoardComponent implements OnInit {
       players,
       1,
       new PlayerInfo("", 7, "a", 0),
-      tableList
+      tableList,
+      "WaitingForPlayers"
     );
     this.tableInfo = table;
     this.tileToPlace = new PlaceTile("", "", "", 0, 0, 0, false, 0);
