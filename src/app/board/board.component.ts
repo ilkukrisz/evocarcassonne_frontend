@@ -19,20 +19,23 @@ export class BoardComponent implements OnInit {
     private playerService: PlayerService,
     private gameService: GameService
   ) {}
-  title: string;
-  @Input() gameId: string;
+
+  gameId: string;
   tileSize: number;
   tile: string;
   placePositions: Array<Position>;
   tableInfo: TableInfo;
   tileToPlace: PlaceTile;
   shift: Position;
+
+  /** Mouse connected attributes */
   initialPos: {
     position: Position;
     offset: Position;
     active: boolean;
   };
   mouseOver: boolean;
+
   ngOnInit(): void {
     this.initialPos = {
       position: new Position(0, 0),
