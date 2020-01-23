@@ -34,7 +34,6 @@ export class BoardComponent implements OnInit {
   };
   mouseOver: boolean;
   ngOnInit(): void {
-    this.title = "Evocarcassonne on init";
     this.initialPos = {
       position: new Position(0, 0),
       offset: new Position(0, 0),
@@ -70,21 +69,6 @@ export class BoardComponent implements OnInit {
     this.placePositions = this.getPlacePositions();
     this.shift = new Position(0, 0);
     this.mouseOver = false;
-  }
-
-  startGame() {
-    this.gameId = this.gameService.getCurrentGame();
-    this.gamePlayService.getCurrentState(this.gameId, response => {
-      this.tableInfo = response;
-      this.placePositions = this.getPlacePositions();
-      this.gamePlayService.startGame(
-        this.gameId,
-        this.tableInfo.currentPlayer.playerId,
-        (result: string) => {
-          console.log("startgame:" + result);
-        }
-      );
-    });
   }
 
   getNewTile() {
