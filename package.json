@@ -26,7 +26,7 @@
     "angular2-draggable": "^2.3.2",
     "bootstrap": "^4.4.1",
     "dragscroll": "0.0.8",
-    "jquery": "^3.4.1",
+    "jquery": "^3.5.0",
     "ngx-cookie-service": "^2.3.0",
     "rxjs": "~6.4.0",
     "tslib": "^1.10.0",
